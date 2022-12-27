@@ -66,7 +66,7 @@ ul {
     align-items: center;
     height: 4rem;
 }
-.card--days  li {
+li.card--days {
                 flex: 1;
                 font-weight: bold;
                 text-transform: uppercase;
@@ -74,14 +74,14 @@ ul {
                 color: #7D8994;;
                 margin: 0 1px;
  }
- .card--dates {
+.card--dates {
             display: grid;
             gap: 3px;
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;
             text-align: center;
 }
-.card--dates li {
+li.card--dates {
                 width: 3.5rem;
                 height: 3.5rem;
                 display: grid;
@@ -89,19 +89,19 @@ ul {
                 font-weight: bold;
                 position: relative;
             }
-.card--dates li prev, li next {
+li.card--dates prev, li.card--dates next {
                 color: #ccc;
             }
-.card--dates li active {
+            li.card--dates active {
                 background: #DE6E46;
                 color: #ffff;
                 border-radius: 50%;
             }
-.card--dates  li circle {
+            li.card--dates circle {
                 border: 2px solid;
                 border-radius: 50%;
 }
-.card--dates  li circle span {
+li.card--dates circle span {
                     position: absolute;
                     top: -0.75rem;
                     right: -0.5rem;
@@ -112,17 +112,17 @@ ul {
                     border-radius: 50%;
 }
 
-.card--dates  li .circle.orange {
+li.card--dates .circle.orange {
                 border-color: #DE6E46;
 }
             
-.card--dates  li .circle.orange span {
+li.card--dates  .circle.orange span {
                     background: #DE6E46;
 }
-.card--dates  li .circle.purple {
+li.card--dates   .circle.purple {
                 border-color: #AE5989;
 }                
-.card--dates  li .circle.purple  span {
+li.card--dates   .circle.purple  span {
                     background: #AE5989;
 }
 
@@ -134,7 +134,7 @@ ul {
     color: #333;
     font-weight: bold;
     }
-    
+
 .card__footer .add {
             text-decoration: none;
             color: inherit;
