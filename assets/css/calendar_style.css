@@ -60,13 +60,19 @@ ul {
     border-bottom: 1px solid #ccc;
 }
 
-.card--days {
+.card__body--days {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 4rem;
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #7D8994;;
+    margin: 0 1px;
 }
-li.card--days {
+li.card__body--days {
                 flex: 1;
                 font-weight: bold;
                 text-transform: uppercase;
@@ -74,14 +80,14 @@ li.card--days {
                 color: #7D8994;;
                 margin: 0 1px;
  }
-.card--dates {
+.card__body--dates {
             display: grid;
             gap: 3px;
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;
             text-align: center;
 }
-li.card--dates {
+li.card__body--dates {
                 width: 3.5rem;
                 height: 3.5rem;
                 display: grid;
@@ -89,19 +95,19 @@ li.card--dates {
                 font-weight: bold;
                 position: relative;
             }
-li.card--dates prev, li.card--dates next {
+li.card__body--dates prev, li.card__body--dates next {
                 color: #ccc;
             }
-            li.card--dates active {
+            li.card__body--dates active {
                 background: #DE6E46;
                 color: #ffff;
                 border-radius: 50%;
             }
-            li.card--dates circle {
+            li.card__body--dates circle {
                 border: 2px solid;
                 border-radius: 50%;
 }
-li.card--dates circle span {
+li.card__body--dates circle span {
                     position: absolute;
                     top: -0.75rem;
                     right: -0.5rem;
@@ -112,17 +118,17 @@ li.card--dates circle span {
                     border-radius: 50%;
 }
 
-li.card--dates .circle.orange {
+li.card__body--dates .circle.orange {
                 border-color: #DE6E46;
 }
             
-li.card--dates  .circle.orange span {
+li.card__body--dates  .circle.orange span {
                     background: #DE6E46;
 }
-li.card--dates   .circle.purple {
+li.card__body--dates   .circle.purple {
                 border-color: #AE5989;
 }                
-li.card--dates   .circle.purple  span {
+li.card__body--dates   .circle.purple  span {
                     background: #AE5989;
 }
 
