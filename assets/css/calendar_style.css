@@ -76,7 +76,7 @@ ul {
 
 .card__body--dates {
             display: grid;
-            gap: 12px;
+            gap: 1px;
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;
             text-align: center;
@@ -110,14 +110,14 @@ ul {
                     border-radius: 50%;
 }
 
-.circle .orange {
+.orange {
                 border-color: #DE6E46;
 }
             
  .orange span {
                     background: #DE6E46;
 }
-.circle .purple {
+.purple {
                 border-color: #AE5989;
 }                
  .purple  span {
