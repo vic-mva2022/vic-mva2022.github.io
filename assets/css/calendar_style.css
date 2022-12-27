@@ -89,7 +89,7 @@ ul {
 .prev, .next {
             color: #ccc;
     }
-.card__body--dates active {
+.active {
                 background: #DE6E46;
                 color: #ffff;
                 border-radius: 50%;
