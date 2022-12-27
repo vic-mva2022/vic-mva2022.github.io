@@ -99,11 +99,11 @@ permalink: /calendar.html
     </div>
 </div>
 <main class="card">
-    <section class="card__header">
+    <section class="card__header" id="monthAndYear">
       <h3>Thursday 7th</h3>
       <h3>January 2020</h3>
     </section>
-    <section class="card__body">
+    <section class="card__body" id="calendar-body">
       <ul class="card__body--days">
         <li class="card__body--days">mon</li>
         <li class="card__body--days">tue</li>
@@ -161,7 +161,7 @@ permalink: /calendar.html
         <br/>
         <form class="form-inline">
             <label class="lead mr-2 ml-2" for="month">Jump To: </label>
-            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+            <select class="form-control col-sm-4" name="month" id="month-2" onchange="jump()">
                 <option value=0>Jan</option>
                 <option value=1>Feb</option>
                 <option value=2>Mar</option>

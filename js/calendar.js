@@ -1,12 +1,12 @@
 today = new Date();
 currentMonth = today.getMonth();
 currentYear = today.getFullYear();
-selectYear = document.getElementById("year");
-selectMonth = document.getElementById("month");
+selectYear = document.getElementById("year-2");
+selectMonth = document.getElementById("month-2");
 
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-monthAndYear = document.getElementById("monthAndYear");
+monthAndYear = document.getElementById("monthAndYear-2");
 showCalendar(currentMonth, currentYear);
 
 
@@ -32,7 +32,7 @@ function showCalendar(month, year) {
 
     let firstDay = (new Date(year, month)).getDay();
 
-    tbl = document.getElementById("calendar-body"); // body of the calendar
+    tbl = document.getElementById("calendar-body-2"); // body of the calendar
 
     // clearing all previous cells
     tbl.innerHTML = "";
