@@ -76,11 +76,11 @@ ul {
 
 .card__body--dates {
             display: grid;
-            gap: 3px;
+            gap: 12px;
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;
             text-align: center;
-            width: 5rem;
+            width:3.5rem;
             height: 3.5rem;
             place-items: center;
             font-weight: bold;
