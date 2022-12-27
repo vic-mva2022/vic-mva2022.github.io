@@ -109,17 +109,17 @@ ul {
                     border-radius: 50%;
 }
 
-.card__body--dates .circle .orange {
+ .orange {
                 border-color: #DE6E46;
 }
             
-.card__body--dates  .circle .orange span {
+ .orange span {
                     background: #DE6E46;
 }
-.card__body--dates   .circle .purple {
+ .purple {
                 border-color: #AE5989;
 }                
-.card__body--dates   .circle .purple  span {
+ .purple  span {
                     background: #AE5989;
 }
 
