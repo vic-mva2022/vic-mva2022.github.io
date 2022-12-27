@@ -110,14 +110,14 @@ ul {
                     border-radius: 50%;
 }
 
- .orange {
+.circle .orange {
                 border-color: #DE6E46;
 }
             
  .orange span {
                     background: #DE6E46;
 }
- .purple {
+.circle .purple {
                 border-color: #AE5989;
 }                
  .purple  span {
