@@ -81,7 +81,6 @@ ul {
             text-align: center;
             width: 3.5rem;
             height: 3.5rem;
-            display: grid;
             place-items: center;
             font-weight: bold;
             position: relative;
@@ -95,11 +94,11 @@ ul {
                 color: #ffff;
                 border-radius: 50%;
             }
-.card__body--dates circle {
+.circle {
                 border: 2px solid;
                 border-radius: 50%;
 }
-.card__body--dates circle span {
+.circle span {
                     position: absolute;
                     top: -0.75rem;
                     right: -0.5rem;
@@ -110,17 +109,17 @@ ul {
                     border-radius: 50%;
 }
 
-.card__body--dates .circle.orange {
+.card__body--dates .circle .orange {
                 border-color: #DE6E46;
 }
             
-.card__body--dates  .circle.orange span {
+.card__body--dates  .circle .orange span {
                     background: #DE6E46;
 }
-.card__body--dates   .circle.purple {
+.card__body--dates   .circle .purple {
                 border-color: #AE5989;
 }                
-.card__body--dates   .circle.purple  span {
+.card__body--dates   .circle .purple  span {
                     background: #AE5989;
 }
 
