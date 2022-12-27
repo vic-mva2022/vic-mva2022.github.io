@@ -80,7 +80,7 @@ ul {
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;
             text-align: center;
-            width: 4rem;
+            width: 5rem;
             height: 3.5rem;
             place-items: center;
             font-weight: bold;
