@@ -20,8 +20,8 @@ html {
 }
 
 body {
-    background: $bg-color;
-    color: $black;
+    background: #78ACCD;
+    color: #333333;
     font-size: 1.5rem;
 }
 
@@ -30,7 +30,7 @@ ul {
 }
 
 .card {
-    background: $white;
+    background: #ffffff;
     width: 90%;
     max-width: 40rem;
     min-height: 40rem;
@@ -41,7 +41,7 @@ ul {
 
     &__header {
         padding: 0 1.25rem;
-        color: $gray;
+        color: #7D8994;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -62,7 +62,7 @@ ul {
                 font-weight: bold;
                 text-transform: uppercase;
                 text-align: center;
-                color: $gray;
+                color: #7D8994;
                 margin: 0 1px;
             }
         }
