@@ -77,13 +77,13 @@ ul {
 
 .card__body--dates {
             display: grid;
-            gap: 1px;
+            gap: 3px;
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;
             text-align: center;
             width:3.5rem;
             height: 3.5rem;
-            grid-gap: 8px 16px;
+            grid-gap: 8px 20px;
             place-items: center;
             font-weight: bold;
             position: relative;
@@ -104,7 +104,7 @@ ul {
 .circle span {
                     position: absolute;
                     top: -0.75rem;
-                    right: -0.rem;
+                    right: -0.5rem;
                     width: 1.75rem;
                     height: 1.75rem;
                     font-size: 1.2rem;
@@ -116,13 +116,13 @@ ul {
                 border-color: #DE6E46;
 }
             
- .orange span {
+.circle .orange span {
                     background: #DE6E46;
 }
 .purple {
                 border-color: #AE5989;
 }                
- .purple  span {
+.circle .purple span {
                     background: #AE5989;
 }
 
