@@ -1,4 +1,3 @@
-
 $bg-color: #78ACCD;
 $white: #ffffff;
 $black: #333333;
@@ -20,8 +19,8 @@ html {
 }
 
 body {
-    background: #78ACCD;
-    color: #333333;
+    background: $bg-color;
+    color: $black;
     font-size: 1.5rem;
 }
 
@@ -30,7 +29,7 @@ ul {
 }
 
 .card {
-    background: #ffffff;
+    background: $white;
     width: 90%;
     max-width: 40rem;
     min-height: 40rem;
@@ -41,7 +40,7 @@ ul {
 
     &__header {
         padding: 0 1.25rem;
-        color: #7D8994;
+        color: $gray;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -62,7 +61,7 @@ ul {
                 font-weight: bold;
                 text-transform: uppercase;
                 text-align: center;
-                color: #7D8994;
+                color: $gray;
                 margin: 0 1px;
             }
         }
