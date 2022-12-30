@@ -1,0 +1,37 @@
+---
+layout: week_calendar_style
+title: "Week Calendar"
+permalink: /week_calendar.html
+---
+
+<main>
+    <!-- Project Code Start -->
+ 
+    <div class="wrapper">
+     <div class="container-calendar">
+         <h3 id="monthAndYear"></h3>
+         <div class="button-container-calendar">
+             <button id="previous" onclick="previous()">&#8249;</button>
+             <button id="next" onclick="next()">&#8250;</button>
+         </div>
+         <table class="table-calendar" id="week-calendar" data-lang="en">
+             <thead id="thead-month"></thead>
+             <tbody id="week-calendar-body"></tbody>
+         </table>    
+         </div>
+     </div>
+ </div>
+          
+          <!--Calendar pure javascript Script JS -->
+          <script  src="js/week-calendar.js"></script>
+          <!-- Project Code End -->
+       </main>
+       
+ 
+ <ul>
+     {% for post in site.posts %}
+         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+     {% endfor %}
+ </ul>
+ 
+ 
