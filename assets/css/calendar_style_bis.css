@@ -58,12 +58,12 @@ body {
 
 /* sunday */
 .date-picker:nth-child(1) {
-  color: red;
+  color: rgb(189, 6, 6);
 }
 
 /* friday */
 .date-picker:nth-child(6) {
-  color: green;
+  color: rgb(3, 165, 138);
 }
 
 #monthAndYear {

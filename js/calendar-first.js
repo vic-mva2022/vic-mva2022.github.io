@@ -45,7 +45,7 @@ if (lang == "en") {
 }
 
 
-var $dataHead = "<tr><days-header>"";
+var $dataHead = "<tr><days-header>";
 for (dhead in days) {
     $dataHead += "<th data-days='" + days[dhead] + "'>"  + days[dhead] +  "</th>";
 }
