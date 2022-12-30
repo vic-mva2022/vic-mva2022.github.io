@@ -103,17 +103,6 @@ body {
     padding: 5px 1em;
 }
 
-days-header {
-    padding: 0 1.25rem;
-    color: #7D8994;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    font-family: sans-serif;
-    line-height: 1.6;
-
-}
-
 html {
     font-size: 12px;
     font-family: sans-serif;
