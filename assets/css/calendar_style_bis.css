@@ -102,3 +102,21 @@ body {
     border-radius: 3px;
     padding: 5px 1em;
 }
+
+.data-days {
+    padding: 0 1.25rem;
+    color: #7D8994;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-family: sans-serif;
+    line-height: 1.6;
+
+}
+
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
