@@ -60,7 +60,7 @@ document.getElementById("thead-month").innerHTML = $dataHead;
 
 
 monthAndYear = document.getElementById("monthAndYear");
-showWeekCalendar(currentMonth, currentYear);
+showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
 
 
 
@@ -107,7 +107,7 @@ function showWeekCalendar(month, year, date, weekday) {
     selectMonth.value = month;
 
     // creating all cells for a week
-    var date = 1;
+    //var date = 1;
     var row = document.createElement("tr");
 
         
@@ -116,15 +116,15 @@ function showWeekCalendar(month, year, date, weekday) {
             break;
         } else {
             cell = document.createElement("td");
-            cell.setAttribute("data-date", date);
+            cell.setAttribute("data-date", date - weekday + j);
             cell.setAttribute("data-month", month + 1);
             cell.setAttribute("data-year", year);
             cell.setAttribute("data-month_name", months[month]);
-            cell.className = "date-week-picker";
-            cell.innerHTML = "<span>" + date + "</span>";
+            cell.className = "date-picker";
+            cell.innerHTML = "<span>" + date - weekday + j + "</span>";
 
             if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
-                cell.className = "date-week-picker selected";
+                cell.className = "date-picker selected";
             }
             row.appendChild(cell);
             date++;
