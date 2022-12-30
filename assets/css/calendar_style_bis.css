@@ -7,7 +7,7 @@ html {
 
 body {
     margin: 0;
-    background: #504f4f;
+    background:#78ACCD;
     font-size: 1em;
 }
 
@@ -105,7 +105,7 @@ body {
 
 days-header {
     padding: 0 1.25rem;
-    color: #7D8994;;
+    color: #7D8994;
     display: flex;
     align-items: center;
     font-size: 15px;

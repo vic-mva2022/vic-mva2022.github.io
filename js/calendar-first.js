@@ -45,11 +45,11 @@ if (lang == "en") {
 }
 
 
-var $dataHead = "<tr><days-header>";
+var $dataHead = "<tr style='color:#7D8994;font-size:15px;font-weight: bold;font-family:sans-serif;line-height: 1.6;'>";
 for (dhead in days) {
     $dataHead += "<th data-days='" + days[dhead] + "'>"  + days[dhead] +  "</th>";
 }
-$dataHead += "</days-header></tr>";
+$dataHead += "</tr>";
 
 //alert($dataHead);
 document.getElementById("thead-month").innerHTML = $dataHead;
