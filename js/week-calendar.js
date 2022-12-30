@@ -13,6 +13,8 @@ currentDate = today.getDate()
 currentWeekDay = today.getDay() // gives int 0-6 (0 for sunday, 6 for saturday)
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
+selectDate = document.getElementById("date");
+selectWeekday = document.getElementById("weekday");
 
 
 createYear = generate_year_range(1970, 2050);
@@ -22,7 +24,7 @@ createYear = generate_year_range(1970, 2050);
 
 document.getElementById("year").innerHTML = createYear;
 
-var calendar = document.getElementById("calendar");
+var calendar = document.getElementById("week-calendar");
 var lang = calendar.getAttribute('data-lang');
 
 var months = "";
