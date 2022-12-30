@@ -4,6 +4,7 @@ title: "Week Calendar"
 permalink: /week_calendar.html
 ---
 
+{% include base_path %}
 <main>
     <!-- Project Code Start -->
  
@@ -25,13 +26,7 @@ permalink: /week_calendar.html
           <!--Calendar pure javascript Script JS -->
           <script  src="js/week-calendar.js"></script>
           <!-- Project Code End -->
-       </main>
+    </main>
        
- 
- <ul>
-     {% for post in site.posts %}
-         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-     {% endfor %}
- </ul>
  
  
