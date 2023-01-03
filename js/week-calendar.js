@@ -120,13 +120,13 @@ function daysInMonth(iMonth, iYear) {
 }
 
 function daysInWeek(iMonth, iYear) {
-    return 7 - new Date(iYear, iMonth, 7).getDate();
+    return 7 - new Date(iYear, iMonth, 7).getDay();
 }
 
 
 function showWeekCalendar(month, year, date, weekday) {
 
-    var firstDay = ( new Date( year, month ) ).getDay();
+    var firstDay = ( new Date( year, month, date ) ).getDay();
 
     tbl = document.getElementById("week-calendar-body");
 
@@ -137,6 +137,7 @@ function showWeekCalendar(month, year, date, weekday) {
     monthAndYear.innerHTML = months[month] + " " + year;
     selectYear.value = year;
     selectMonth.value = month;
+    selectDate.value = date;
 
     // creating all cells for a week
     //var date = 1;
