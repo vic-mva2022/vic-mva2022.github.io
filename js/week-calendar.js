@@ -119,8 +119,8 @@ function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
-function daysInWeek(iMonth, iYear) {
-    return 7 - new Date(iYear, iMonth, 7).getDay();
+function daysInWeek(iMonth, iYear, iDate) {
+    return 7 - new Date(iYear, iMonth, iDate).getDay();
 }
 
 
@@ -145,19 +145,16 @@ function showWeekCalendar(month, year, date, weekday) {
 
         
     for ( var j = 0; j < 7; j++ ) {
-        if (date > daysInMonth(month, year)) {
+        if (date > 100 + daysInMonth(month, year)) {
             break;
         } else {
             cell = document.createElement("td");
-            console.log(typeof date);
-            console.log(typeof weekday);
-            console.log(typeof j);
-            cell.setAttribute("data-date", date - weekday + j);
+            var new_date = date - weekday + j;
+            cell.setAttribute("data-date", new_date);
             cell.setAttribute("data-month", month + 1);
             cell.setAttribute("data-year", year);
             cell.setAttribute("data-month_name", months[month]);
             cell.className = "date-picker";
-            var new_date = date - weekday + j;
             cell.innerHTML = "<span>" + new_date + "</span>";
 
             if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
