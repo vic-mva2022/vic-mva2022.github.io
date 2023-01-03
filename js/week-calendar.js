@@ -82,6 +82,7 @@ function next() {
     else {
         currentDate = (currentDate + 1) % 31;
     }
+    currentWeekDay = (currentWeekDay + 1) % 7;
     showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
 }
 
@@ -101,6 +102,7 @@ function previous() {
     else {
         currentDate = (currentDate - 1) % 30;
     }
+    currentWeekDay = (currentWeekDay - 1) % 7;
     showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
 }
 
