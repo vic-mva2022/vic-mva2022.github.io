@@ -29,10 +29,13 @@ var lang = calendar.getAttribute('data-lang');
 
 var months = "";
 var days = "";
+var dates = "";
 
 var monthDefault = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 var dayDefault = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+var dateDefault = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 if (lang == "en") {
     months = monthDefault;
@@ -67,19 +70,46 @@ showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
 function next() {
     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
     currentMonth = (currentMonth + 1) % 12;
-    showWeekCalendar(currentMonth, currentYear);
+    if (currentMonth === 1) {
+        if (currentYear % 4 == 0) {
+            currentDate = (currentDate + 1) % 29;
+        }
+        currentDate = (currentDate + 1) % 28;
+    }
+    else if (currentMonth === 3 || currentMonth === 5 || currentMonth === 8 || currentMonth === 10) {
+            currentDate = (currentDate + 1) % 30;
+    }
+    else {
+        currentDate = (currentDate + 1) % 31;
+    }
+    showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
 }
 
 function previous() {
     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    showWeekCalendar(currentMonth, currentYear);
+    if (currentMonth === 1) {
+        if (currentYear % 4 == 0) {
+            currentDate = (currentDate - 1) % 29;
+        }
+        currentDate = (currentDate - 1) % 28;
+    }
+    else if (currentMonth === 1 || currentMonth === 3 || currentMonth === 5 || currentMonth === 7 
+        || currentMonth === 8 || currentMonth === 10 || currentMonth === 12) {
+            currentDate = (currentDate - 1) % 31;
+    }
+    else {
+        currentDate = (currentDate - 1) % 30;
+    }
+    showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
 }
 
 function jump() {
     currentYear = parseInt(selectYear.value);
     currentMonth = parseInt(selectMonth.value);
-    showWeekCalendar(currentMonth, currentYear);
+    currentDate = parseInt(selectDate.value);
+    currentWeekDay = parseInt(selectWeekday.value);
+    showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
 }
 
 
@@ -116,6 +146,9 @@ function showWeekCalendar(month, year, date, weekday) {
             break;
         } else {
             cell = document.createElement("td");
+            console.log(typeof date);
+            console.log(typeof weekday);
+            console.log(typeof j);
             cell.setAttribute("data-date", date - weekday + j);
             cell.setAttribute("data-month", month + 1);
             cell.setAttribute("data-year", year);
