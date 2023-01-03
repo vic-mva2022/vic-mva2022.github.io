@@ -154,9 +154,10 @@ function showWeekCalendar(month, year, date, weekday) {
             cell.setAttribute("data-year", year);
             cell.setAttribute("data-month_name", months[month]);
             cell.className = "date-picker";
-            cell.innerHTML = "<span>" + date - weekday + j + "</span>";
+            var new_date = date - weekday + j;
+            cell.innerHTML = "<span>" + new_date + "</span>";
 
-            if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+            if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                 cell.className = "date-picker selected";
             }
             row.appendChild(cell);
