@@ -125,7 +125,7 @@ function daysInWeek(iMonth, iYear, iDate) {
 }
 
 
-function showWeekCalendar(month, year, date, weekday) {
+function showWeekCalendar(month, year, datev, weekday) {
 
     //var firstDay = ( new Date( year, month, date ) ).getDay();
 
@@ -138,10 +138,12 @@ function showWeekCalendar(month, year, date, weekday) {
     monthAndYear.innerHTML = months[month] + " " + year;
     selectYear.value = year;
     selectMonth.value = month;
-    selectDate.value = date;
+    selectDate.value = datev;
 
     // creating all cells for a week
     //var date = 1;
+
+    var date = datev - weekday;
     
 
     for ( var i = 0; i < 1; i++ ) {    
@@ -149,8 +151,8 @@ function showWeekCalendar(month, year, date, weekday) {
         for ( var j = 0; j < 7; j++ ) {
            
             cell = document.createElement("td");
-            var new_date = ParseInt(dates[date+1]) - ParseInt(weekday) + ParseInt(j);
-            cell.setAttribute("data-date", new_date);
+            var new_date = ParseInt(dates[date]) - ParseInt(weekday) + ParseInt(j);
+            cell.setAttribute("data-date", String(new_date));
             cell.setAttribute("data-month", month + 1);
             cell.setAttribute("data-year", year);
             cell.setAttribute("data-month_name", months[month]);
