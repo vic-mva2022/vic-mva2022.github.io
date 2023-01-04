@@ -149,7 +149,7 @@ function showWeekCalendar(month, year, date, weekday) {
         for ( var j = 0; j < 7; j++ ) {
            
             cell = document.createElement("td");
-            var new_date = ParseInt(date) - ParseInt(weekday) + ParseInt(j);
+            var new_date = ParseInt(dates[date+1]) - ParseInt(weekday) + ParseInt(j);
             cell.setAttribute("data-date", new_date);
             cell.setAttribute("data-month", month + 1);
             cell.setAttribute("data-year", year);
