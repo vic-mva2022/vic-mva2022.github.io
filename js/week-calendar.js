@@ -123,7 +123,7 @@ function daysInWeek(iMonth, iYear, iDate) {
 }
 
 
-function showWeekCalendar(month, year, datev, weekday) {
+function showWeekCalendar(month, year, datev) {
 
     //var firstDay = ( new Date( year, month, date ) ).getDay();
 
@@ -144,7 +144,7 @@ function showWeekCalendar(month, year, datev, weekday) {
     var date = datev - weekday;
     
 
-    for ( var i = 0; i < 1; i++ ) {
+    for ( var i = 0; i < 6; i++ ) {
         
         var row = document.createElement("tr");
 
