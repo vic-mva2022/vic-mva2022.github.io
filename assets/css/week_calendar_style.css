@@ -40,21 +40,12 @@ body {
     width: 100%;
 }
 
-.table-calendar th {
-    padding: 10px;
+.table-calendar td, .table-calendar th {
+    padding: 5px;
     border: 1px solid #e2e2e2;
     text-align: center;
     vertical-align: top;
 }
-
-.table-calendar td {
-    padding: 10px;
-    border: 1px solid #e2e2e2;
-    text-align: center;
-    vertical-align: top;
-    height: 100px;
-}
-
 
 .date-picker.selected {
     font-weight: bold;
