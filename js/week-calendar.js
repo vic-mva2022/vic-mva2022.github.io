@@ -126,7 +126,7 @@ function daysInWeek(iMonth, iYear, iDate) {
 
 function showWeekCalendar(month, year, date, weekday) {
 
-    var firstDay = ( new Date( year, month, date ) ).getDay();
+    //var firstDay = ( new Date( year, month, date ) ).getDay();
 
     tbl = document.getElementById("week-calendar-body");
 
