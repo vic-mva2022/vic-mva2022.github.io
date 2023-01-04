@@ -144,7 +144,7 @@ function showWeekCalendar(month, year, datev, weekday) {
     var date = datev - weekday;
     
 
-    for ( var i = 0; i < 1; i++ ) {    
+    for ( var i = 0; i < 6; i++ ) {    
         var row = document.createElement("tr");
         for ( var j = date; j < date + 7; j++ ) {
            
