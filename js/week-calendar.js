@@ -158,8 +158,6 @@ function showWeekCalendar(month, year, date, weekday) {
             cell.className = "date-picker selected";
         }
         row.appendChild(cell);
-        date++;
     }
-
-        tbl.appendChild(row);
+    tbl.appendChild(row);
 }
