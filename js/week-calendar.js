@@ -144,24 +144,40 @@ function showWeekCalendar(month, year, datev, weekday) {
     var date = datev - weekday;
     
 
-    for ( var i = 0; i < 6; i++ ) {    
-        var row = document.createElement("tr");
-        for ( var j = date; j < date + 7; j++ ) {
-           
-            cell = document.createElement("td");
+    for ( var i = 0; i < 1; i++ ) {
         
-            cell.setAttribute("data-date", j);
-            cell.setAttribute("data-month", month + 1);
-            cell.setAttribute("data-year", year);
-            cell.setAttribute("data-month_name", months[month]);
-            cell.className = "date-picker";
-            cell.innerHTML = "<span>" + j + "</span>";
+        var row = document.createElement("tr");
 
-            if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
-                cell.className = "date-picker selected";
+        
+        for ( var j = 0; j < 7; j++ ) {
+            if ( i === 0 && j < firstDay ) {
+                cell = document.createElement( "td" );
+                cellText = document.createTextNode("");
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            } else if (date > daysInMonth(month, year)) {
+                break;
+            } else {
+                cell = document.createElement("td");
+                cell.setAttribute("data-date", date);
+                cell.setAttribute("data-month", month + 1);
+                cell.setAttribute("data-year", year);
+                cell.setAttribute("data-month_name", months[month]);
+                cell.className = "date-picker";
+                cell.innerHTML = "<span>" + date + "</span>";
+
+                if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+                    cell.className = "date-picker selected";
+                }
+                row.appendChild(cell);
+                date++;
             }
-            row.appendChild(cell);
+
+
         }
+
         tbl.appendChild(row);
     }
+
 }
+
