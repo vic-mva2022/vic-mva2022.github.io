@@ -14,7 +14,6 @@ currentWeekDay = today.getDay() // gives int 0-6 (0 for sunday, 6 for saturday)
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 selectDate = document.getElementById("date");
-selectWeekday = document.getElementById("weekday");
 
 
 createYear = generate_year_range(1970, 2050);
@@ -64,7 +63,7 @@ document.getElementById("thead-month").innerHTML = $dataHead;
 
 
 monthAndYear = document.getElementById("monthAndYear");
-showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
+showWeekCalendar(currentMonth, currentYear, currentDate,);
 
 
 
@@ -84,7 +83,7 @@ function next() {
         currentDate = (currentDate + 1) % 31;
     }
     currentWeekDay = (currentWeekDay + 1) % 7;
-    showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
+    showWeekCalendar(currentMonth, currentYear, currentDate);
 }
 
 function previous() {
@@ -104,15 +103,14 @@ function previous() {
         currentDate = (currentDate - 1) % 30;
     }
     currentWeekDay = (currentWeekDay - 1) % 7;
-    showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
+    showWeekCalendar(currentMonth, currentYear, currentDate);
 }
 
 function jump() {
     currentYear = parseInt(selectYear.value);
     currentMonth = parseInt(selectMonth.value);
     currentDate = parseInt(selectDate.value);
-    currentWeekDay = parseInt(selectWeekday.value);
-    showWeekCalendar(currentMonth, currentYear, currentDate, currentWeekDay);
+    showWeekCalendar(currentMonth, currentYear, currentDate);
 }
 
 
@@ -148,16 +146,16 @@ function showWeekCalendar(month, year, datev, weekday) {
 
     for ( var i = 0; i < 1; i++ ) {    
         var row = document.createElement("tr");
-        for ( var j = 0; j < 7; j++ ) {
+        for ( var j = date; j < date + 7; j++ ) {
            
             cell = document.createElement("td");
-            var new_date = ParseInt(dates[date]) - ParseInt(weekday) + ParseInt(j);
-            cell.setAttribute("data-date", String(new_date));
+        
+            cell.setAttribute("data-date", j);
             cell.setAttribute("data-month", month + 1);
             cell.setAttribute("data-year", year);
             cell.setAttribute("data-month_name", months[month]);
             cell.className = "date-picker";
-            cell.innerHTML = "<span>" + new_date + "</span>";
+            cell.innerHTML = "<span>" + j + "</span>";
 
             if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                 cell.className = "date-picker selected";
