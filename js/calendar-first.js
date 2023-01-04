@@ -109,13 +109,12 @@ function showCalendar(month, year) {
                 break;
             } else {
                 cell = document.createElement("td");
-                cell.setAttribute("data-date", date );
+                cell.setAttribute("data-date", date);
                 cell.setAttribute("data-month", month + 1);
                 cell.setAttribute("data-year", year);
                 cell.setAttribute("data-month_name", months[month]);
                 cell.className = "date-picker";
-                var new_date = ParseInt(date) - ParseInt(j) ;
-                cell.innerHTML = "<span>" + new_date + "</span>";
+                cell.innerHTML = "<span>" + date + "</span>";
 
                 if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                     cell.className = "date-picker selected";
@@ -131,6 +130,7 @@ function showCalendar(month, year) {
     }
 
 }
+
 
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
