@@ -35,7 +35,7 @@ var monthDefault = ["January", "February", "March", "April", "May", "June", "Jul
 
 var dayDefault = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-var dateDefault = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var dateDefault = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
 
 if (lang == "en") {
     months = monthDefault;
@@ -50,6 +50,7 @@ if (lang == "en") {
     months = monthDefault;
     days = dayDefault;
 }
+dates = dateDefault;
 
 
 var $dataHead = "<tr style='color:#7D8994;font-size:15px;font-weight: bold;font-family:sans-serif;line-height: 1.6;'>";
@@ -141,24 +142,26 @@ function showWeekCalendar(month, year, date, weekday) {
 
     // creating all cells for a week
     //var date = 1;
-    var row = document.createElement("tr");
+    
 
-        
-    for ( var j = 0; j < 7; j++ ) {
-        document.getElementById("demo").innerHTML = typeof(j) + typeof(weekday) + "<br>" + typeof(date)+ "<br>" + String(date - weekday + j);
-        cell = document.createElement("td");
-        var new_date = date - weekday + j;
-        cell.setAttribute("data-date", new_date);
-        cell.setAttribute("data-month", month + 1);
-        cell.setAttribute("data-year", year);
-        cell.setAttribute("data-month_name", months[month]);
-        cell.className = "date-picker";
-        cell.innerHTML = "<span>" + new_date + "</span>";
+    for ( var i = 0; i < 1; i++ ) {    
+        var row = document.createElement("tr");
+        for ( var j = 0; j < 7; j++ ) {
+           
+            cell = document.createElement("td");
+            var new_date = date - weekday + j;
+            cell.setAttribute("data-date", new_date);
+            cell.setAttribute("data-month", month + 1);
+            cell.setAttribute("data-year", year);
+            cell.setAttribute("data-month_name", months[month]);
+            cell.className = "date-picker";
+            cell.innerHTML = "<span>" + String(new_date) + "</span>";
 
-        if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
-            cell.className = "date-picker selected";
+            if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+                cell.className = "date-picker selected";
+            }
+            row.appendChild(cell);
         }
-        row.appendChild(cell);
+        tbl.appendChild(row);
     }
-    tbl.appendChild(row);
 }
