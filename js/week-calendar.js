@@ -145,26 +145,21 @@ function showWeekCalendar(month, year, date, weekday) {
 
         
     for ( var j = 0; j < 7; j++ ) {
-        if (date > 100 + daysInMonth(month, year)) {
-            break;
-        } else {
-            cell = document.createElement("td");
-            var new_date = date - weekday + j;
-            cell.setAttribute("data-date", new_date);
-            cell.setAttribute("data-month", month + 1);
-            cell.setAttribute("data-year", year);
-            cell.setAttribute("data-month_name", months[month]);
-            cell.className = "date-picker";
-            cell.innerHTML = "<span>" + new_date + "</span>";
+        cell = document.createElement("td");
+        var new_date = date - weekday + j;
+        cell.setAttribute("data-date", new_date);
+        cell.setAttribute("data-month", month + 1);
+        cell.setAttribute("data-year", year);
+        cell.setAttribute("data-month_name", months[month]);
+        cell.className = "date-picker";
+        cell.innerHTML = "<span>" + new_date + "</span>";
 
-            if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
-                cell.className = "date-picker selected";
-            }
-            row.appendChild(cell);
-            date++;
+        if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+            cell.className = "date-picker selected";
         }
-
-
+        row.appendChild(cell);
+        date++;
     }
+
         tbl.appendChild(row);
 }
