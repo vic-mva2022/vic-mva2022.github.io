@@ -149,13 +149,13 @@ function showWeekCalendar(month, year, date, weekday) {
         for ( var j = 0; j < 7; j++ ) {
            
             cell = document.createElement("td");
-            var new_date = date - weekday + j;
+            var new_date = ParseInt(date) - ParseInt(weekday) + ParseInt(j);
             cell.setAttribute("data-date", new_date);
             cell.setAttribute("data-month", month + 1);
             cell.setAttribute("data-year", year);
             cell.setAttribute("data-month_name", months[month]);
             cell.className = "date-picker";
-            cell.innerHTML = "<span>" + String(new_date) + "</span>";
+            cell.innerHTML = "<span>" + new_date + "</span>";
 
             if ( new_date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                 cell.className = "date-picker selected";
